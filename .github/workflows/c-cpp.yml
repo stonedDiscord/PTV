@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -25,3 +25,7 @@ jobs:
         cd "8633_915_ DR1"
         cd "grafik filer"
         cl filter.c
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        path: "PT5230/PT8633/TPD/900_NR/8633_915_ DR1/grtafik files/*.exe"
