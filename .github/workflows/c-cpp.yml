@@ -31,7 +31,8 @@ jobs:
         cd "8633_915_ DR1"
         cd "grafik filer"
         cl /D_USE_MATH_DEFINES filter.c
+        dir
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        path: "PT5230/PT8633/TPD/900_NR/8633_915_ DR1/grtafik files/*.exe"
+        path: "PT5230/PT8633/TPD/900_NR/8633_915_ DR1/grafik filer/*.exe"
