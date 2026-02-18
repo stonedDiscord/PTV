@@ -1,0 +1,27 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build makelogo
+      run: |
+        cd PT5230/PT8633/TPD/900_NR
+        cd "8633_915_ DR1"
+        cd "grafik filer"
+        cl makelogo.c
+    - name: Build filter
+      run: |
+        cd PT5230/PT8633/TPD/900_NR
+        cd "8633_915_ DR1"
+        cd "grafik filer"
+        cl filter.c
