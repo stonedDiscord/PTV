@@ -24,13 +24,13 @@ jobs:
         cd PT5230/PT8633/TPD/900_NR
         cd "8633_915_ DR1"
         cd "grafik filer"
-        cl makelogo.c
+        cl /D_USE_MATH_DEFINES makelogo.c
     - name: Build filter
       run: |
         cd PT5230/PT8633/TPD/900_NR
         cd "8633_915_ DR1"
         cd "grafik filer"
-        cl filter.c
+        cl /D_USE_MATH_DEFINES filter.c
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
